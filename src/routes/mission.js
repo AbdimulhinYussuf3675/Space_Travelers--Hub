@@ -1,7 +1,25 @@
 import React from 'react';
+import MissionList from 'components/missionList';
+import styles from 'styles/MissionList.module.css';
 
 function Missions() {
-  <h1>This are the missions</h1>;
+  return (
+    <div className={styles.missionsContainer}>
+      <div className={styles.missionsHeader}>
+        <div>
+          <p>Missions</p>
+        </div>
+        <div>
+          <p>Descriptions</p>
+        </div>
+        <div>
+          <p>Status</p>
+        </div>
+        <div />
+      </div>
+      <MissionList />
+    </div>
+  );
 }
 
 export default Missions;
