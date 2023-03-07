@@ -7,10 +7,10 @@ function Missions() {
     <div className={styles.missionsContainer}>
       <div className={styles.missionsHeader}>
         <div>
-          <p>Mission</p>
+          <p>Missions</p>
         </div>
         <div>
-          <p>Description</p>
+          <p>Descriptions</p>
         </div>
         <div>
           <p>Status</p>
