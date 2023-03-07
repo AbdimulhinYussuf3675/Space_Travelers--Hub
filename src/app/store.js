@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
+import missionReducer from '../features/Mission/mission';
 
-const store = configureStore({
+export default configureStore({
   reducer: {
+    books: missionReducer,
   },
 });
-
-export default store;
