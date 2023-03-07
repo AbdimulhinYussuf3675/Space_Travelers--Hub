@@ -1,6 +1,6 @@
 import React from 'react';
 import MissionList from 'components/missionList';
-import styles from 'styles/Mission.module.css';
+import styles from 'styles/MissionList.module.css';
 
 function Missions() {
   return (
