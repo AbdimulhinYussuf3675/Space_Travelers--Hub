@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BooksList from 'routes/mission';
 import Navbar from './components/Navbar';
 import Profile from './routes/profile';
-import Rocket from './routes/rockets';
+import Rocket from './routes/rocket';
 
 const App = () => (
   <div className="app">
