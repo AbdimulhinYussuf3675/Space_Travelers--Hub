@@ -3,6 +3,7 @@ import MissionList from 'components/missionList';
 import styles from 'styles/MissionList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions } from 'features/Mission/mission';
+import '../styles/MissionList.module.css';
 
 let render = true;
 
