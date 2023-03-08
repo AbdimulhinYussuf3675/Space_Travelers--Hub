@@ -44,7 +44,12 @@ export const getMissions = createAsyncThunk(
   async (_, { dispatch }) => {
     const response = await fetch(URL);
     const objectData = await response.json();
-    const newObj = objectData.map((mission) => ({ ...mission, joined: false }));
+    const newObj = objectData.map((mission) => ({
+      mission_id: mission.mission_id,
+      mission_name: mission.mission_name,
+      description: mission.description,
+      joined: false,
+    }));
     dispatch({
       type: Fetchmission,
       payload: newObj,
