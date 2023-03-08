@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 import Mission from 'routes/mission';
 import Navbar from './components/Navbar';
 import Profile from './routes/profile';
 import Rockets from './routes/rockets';
 
 const App = () => (
-  <div className="app">
+  <Container>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -15,7 +16,7 @@ const App = () => (
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
-  </div>
+  </Container>
 );
 
 export default App;
