@@ -1,32 +1,28 @@
 import React from 'react';
-import styles from '../styles/MissionList.module.css';
+import PropTypes from 'prop-types';
+import '../styles/MissionList.module.css';
 
-const MissionList = () => (
-  <div className={styles.missionItems}>
-    <div className={styles.missionHead}>
-      <h3>Elon Musk</h3>
+function MissionList({
+  id, name, description, joined,
+}) {
+  return (
+    <div>
+      <tr key={id} className="row">
+        <th>{name}</th>
+        <td>{description}</td>
+        <td>
+          <span className={`status ${!joined ? '' : 'active'}`} />
+        </td>
+      </tr>
     </div>
-    <div className={styles.missionInfo}>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet
-        aliquet diam. Cras ullamcorper est quis odio efficitur suscipit. Quisque
-        vitae cursus dolor. Cras vitae justo velit. Phasellus venenatis iaculis
-        ornare. Etiam egestas egestas vulputate. Pellentesque nibh lorem, cursus
-        eget dolor ut, finibus fermentum est. Vivamus eu consequat elit,
-        tincidunt egestas diam. Donec tincidun
-      </p>
-    </div>
-    <div className={styles.buttons}>
-      <button type="button" className={styles.memberBtn}>
-        NOT A MEMBER
-      </button>
-    </div>
-    <div className={styles.buttons}>
-      <button type="button" className={styles.joinMissionBtn}>
-        Join Mission
-      </button>
-    </div>
-  </div>
-);
+  );
+}
+
+MissionList.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  joined: PropTypes.bool.isRequired,
+};
 
 export default MissionList;

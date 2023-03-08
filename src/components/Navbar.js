@@ -7,12 +7,12 @@ const Navbar = () => (
     <h1 className={styles.logo}>Space Rockets</h1>
     <ul className={styles.navLinks}>
       <li className={styles.links}>
-        <NavLink to="/rockets" className={styles.link}>
+        <NavLink to="/" className={styles.link}>
           Rockets
         </NavLink>
       </li>
       <li>
-        <NavLink to="/" className={styles.link}>
+        <NavLink to="/mission" className={styles.link}>
           Missions
         </NavLink>
       </li>

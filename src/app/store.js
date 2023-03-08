@@ -4,7 +4,7 @@ import missionReducer from '../features/Mission/mission';
 
 export default configureStore({
   reducer: {
-    books: missionReducer,
+    missionReducer,
     rocket: rocketReducer,
   },
 });
