@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles/MissionList.module.css';
+import '../styles/MissionList.module.css';
 
 function MissionList({
   id, name, description, joined,
 }) {
   return (
     <div>
-      <tr key={id} className={styles.row}>
+      <tr key={id} className="row">
         <th>{name}</th>
         <td>{description}</td>
         <td>
-          <span className={`status ${!joined ? '' : 'active'}`}>
-            {!joined ? 'Not a member' : 'Active member'}
-          </span>
+          <span className={`status ${!joined ? '' : 'active'}`} />
         </td>
       </tr>
     </div>
