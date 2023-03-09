@@ -14,8 +14,8 @@ const RocketSlice = createSlice({
       state.rockets = payload.map((item) => ({
         id: item.id,
         name: item.rocket_name,
-        type: item.rocket_type,
-        flickr_images: item.flickr_images[0],
+        description: item.description,
+        image: item.flickr_images[0],
       }));
     },
   },
