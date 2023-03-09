@@ -7,7 +7,7 @@ table {
 }
 
 .row td {
-  border: 1px solid #333;
+  border: 1px solid #e94a4a;
   height: 120px;
   text-align: start;
   padding-left: 2px;
@@ -19,6 +19,11 @@ tr td:first-child {
 
 tr td:nth-child(2) {
   width: 55%;
+  border: 1px solid #333;
+  height: 30px;
+  padding: 5px;
+  text-align: start;
+  vertical-align: top;
 }
 
 tr th {
@@ -36,6 +41,10 @@ tbody tr:nth-child(2n) {
 tr td:nth-child(4),
 tr td:nth-child(3) {
   text-align: center;
+  border: 1px solid #333;
+  height: 30px;
+  padding: 5px;
+  vertical-align: top;
 }
 
 .status {

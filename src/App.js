@@ -5,6 +5,7 @@ import Mission from 'routes/mission';
 import Navbar from './components/Navbar';
 import Profile from './routes/profile';
 import Rockets from './routes/rockets';
+import './styles/App.css';
 
 const App = () => (
   <Container>

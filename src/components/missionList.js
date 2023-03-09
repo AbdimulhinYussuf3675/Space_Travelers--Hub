@@ -9,11 +9,10 @@ function MissionList({
 }) {
   const dispatch = useDispatch();
   const joinBtn = (event) => {
-    if (event.target.textContent === 'Join Mission') {
-      dispatch(joinMission(event.target.id));
-    }
-    if (event.target.textContent === 'Leave Mission') {
+    if (joined) {
       dispatch(leaveMission(event.target.id));
+    } else {
+      dispatch(joinMission(event.target.id));
     }
   };
   return (
