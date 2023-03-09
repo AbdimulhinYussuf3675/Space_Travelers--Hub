@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import MissionList from 'components/missionList';
-import styles from 'styles/MissionList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions } from 'features/Mission/mission';
 import '../styles/MissionList.module.css';
@@ -21,7 +20,7 @@ const Missions = () => {
 
   return (
     <div className="container">
-      <table className={styles.table}>
+      <table className="table">
         <tbody>
           <tr>
             <th>Mission</th>
