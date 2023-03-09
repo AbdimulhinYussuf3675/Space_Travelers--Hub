@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const JoinMission = 'spaceTravelers/mission/JoinMission';
-const LeaveMission = 'spaceTravelers/mission/Remove';
-const Fetchmission = 'spaceTravelers/mission/Fetchmission';
+const JOINMission = 'spaceTravelers/mission/JoinMission';
+const LEAVEMission = 'spaceTravelers/mission/Remove';
+const FETCHmission = 'spaceTravelers/mission/Fetchmission';
 
 const URL = 'https://api.spacexdata.com/v3/missions';
 
@@ -10,19 +10,19 @@ const initialState = [];
 
 export default function missionReducer(state = initialState, action) {
   switch (action.type) {
-    case JoinMission:
+    case JOINMission:
       return state.map((mission) => {
         if (mission.mission_id !== action.payload) return mission;
         return { ...mission, joined: true };
       });
 
-    case LeaveMission:
+    case LEAVEMission:
       return state.map((mission) => {
         if (mission.mission_id !== action.payload) return mission;
         return { ...mission, joined: false };
       });
 
-    case Fetchmission:
+    case FETCHmission:
       return action.payload;
     default:
       return [...state];
@@ -30,17 +30,17 @@ export default function missionReducer(state = initialState, action) {
 }
 
 export const joinMission = (payload) => ({
-  type: JoinMission,
+  type: JOINMission,
   payload,
 });
 
 export const leaveMission = (payload) => ({
-  type: LeaveMission,
+  type: LEAVEMission,
   payload,
 });
 
 export const getMissions = createAsyncThunk(
-  Fetchmission,
+  FETCHmission,
   async (_, { dispatch }) => {
     const response = await fetch(URL);
     const objectData = await response.json();
@@ -51,7 +51,7 @@ export const getMissions = createAsyncThunk(
       joined: false,
     }));
     dispatch({
-      type: Fetchmission,
+      type: FETCHmission,
       payload: newObj,
     });
   },
