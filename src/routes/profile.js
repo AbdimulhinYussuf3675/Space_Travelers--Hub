@@ -4,9 +4,8 @@ import styles from '../styles/Profilemiss.module.css';
 
 const Profile = () => {
   const { missionReducer, rocket } = useSelector((state) => state);
-
   const newProf = missionReducer.filter((mission) => mission.joined === true);
-  const reservedRockets = rocket.rockets.filter((rocket) => rocket.reserved === true);
+  const reservedRockets = rocket.rockets.filter((item) => item.reserved === true);
 
   const myMission = () => (newProf.length > 0
     ? newProf.map((mission) => (
@@ -18,7 +17,7 @@ const Profile = () => {
     : <div className={styles.noMission}>No Mission Available</div>);
 
   const myRockets = () => (reservedRockets.length > 0
-    ? newProf.map((rocket) => (
+    ? reservedRockets.map((rocket) => (
       <ProfileItem
         key={rocket.id}
         name={rocket.name}
@@ -29,9 +28,12 @@ const Profile = () => {
   return (
     <div className={styles.myProfile}>
       <div className={styles.missionContainer}>
-        <h2>My Missions</h2>
-        <div className={styles.items}>
+        <div>
+          <h2>My Mission</h2>
           <ul>{myMission()}</ul>
+        </div>
+        <div>
+          <h2>My Rockets</h2>
           <ul>{myRockets()}</ul>
         </div>
       </div>
