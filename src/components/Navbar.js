@@ -1,10 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from 'styles/Nav.module.css';
+import logo from './image/logo.png';
 
 const Navbar = () => (
   <nav className={styles.navBar}>
-    <h1 className={styles.logo}>Space Rockets</h1>
+    <div className={styles.logo}>
+      <img src={logo} alt="travelers logo " />
+      <h1>Space Rockets</h1>
+    </div>
     <ul className={styles.navLinks}>
       <li className={styles.links}>
         <NavLink to="/" className={styles.link}>
