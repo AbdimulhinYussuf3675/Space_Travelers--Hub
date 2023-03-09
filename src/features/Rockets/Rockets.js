@@ -8,17 +8,23 @@ const initialState = {
 const RocketSlice = createSlice({
   name: 'rocket',
   initialState,
-  reducers: {},
+  reducers: {
+    reserveRocket: (state, { payload }) => {
+      state.rockets = state.rockets.map((rocket) => ((rocket.id === payload)
+        ? { ...rocket, reserved: !rocket.reserved } : rocket));
+    },
+  },
   extraReducers: {
     [getRockets.fulfilled]: (state, { payload }) => {
       state.rockets = payload.map((item) => ({
         id: item.id,
         name: item.rocket_name,
-        type: item.rocket_type,
-        flickr_images: item.flickr_images[0],
+        description: item.description,
+        image: item.flickr_images[0],
+        reserved: false,
       }));
     },
   },
 });
-
+export const { reserveRocket } = RocketSlice.actions;
 export default RocketSlice.reducer;

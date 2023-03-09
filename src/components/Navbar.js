@@ -9,6 +9,7 @@ const Navbar = () => (
       <img src={logo} alt="travelers logo " />
       <h1>Space Rockets</h1>
     </div>
+
     <ul className={styles.navLinks}>
       <li className={styles.links}>
         <NavLink to="/" className={styles.link}>
