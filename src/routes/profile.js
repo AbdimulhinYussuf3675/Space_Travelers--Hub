@@ -5,7 +5,7 @@ import styles from '../styles/Profilemiss.module.css';
 const Profile = () => {
   const { missionReducer, rocket } = useSelector((state) => state);
   const newProf = missionReducer.filter((mission) => mission.joined === true);
-  const reservedRockets = rocket.rockets.filter((item) => item.reserved === true);
+  const reservedRockets = rocket.filter((rocket) => rocket.reserved === true);
 
   const myMission = () => (newProf.length > 0
     ? newProf.map((mission) => (
