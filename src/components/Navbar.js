@@ -22,7 +22,7 @@ const Navbar = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink to="/categories" className={styles.link}>
+        <NavLink to="/Profile" className={styles.link}>
           Profile
         </NavLink>
       </li>
