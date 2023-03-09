@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navbar test should render navigation 1`] = `
+exports[`Navbar test check if  navigation rendered 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

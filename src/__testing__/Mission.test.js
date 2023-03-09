@@ -3,17 +3,17 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import store from 'app/store';
-import Navbar from 'components/Navbar';
+import Missions from 'routes/mission';
 
-describe('Navbar test', () => {
-  test('check if  navigation rendered', () => {
-    const navbar = render(
+describe('Add Missions test', () => {
+  test('Render all missions', () => {
+    const missions = render(
       <Provider store={store}>
         <BrowserRouter>
-          <Navbar />
+          <Missions />
         </BrowserRouter>
       </Provider>,
     );
-    expect(navbar).toMatchSnapshot();
+    expect(missions).toMatchSnapshot();
   });
 });
