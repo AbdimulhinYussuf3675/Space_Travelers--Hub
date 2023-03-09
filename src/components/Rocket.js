@@ -1,20 +1,23 @@
 import { PropTypes } from 'prop-types';
 import styles from 'styles/Rocket.module.css';
-import Button from 'react-bootstrap/Button';
+import { useDispatch } from 'react-redux';
+import { reserverRocket } from 'features/Rockets/Rockets';
 
 const Rocket = ({ data }) => {
   const {
-    id, image, name, description,
+    id, image, name, description, reserved,
   } = data;
+  const dispatch = useDispatch();
+
   return (
-    <li className={styles.rocket} key={id}>
+    <li className={styles.rocket}>
       <div className={styles.img}>
         <img src={image} alt={name} />
       </div>
       <div className={styles.details}>
         <h3>{name}</h3>
         <p>{description}</p>
-        <Button type="button" variant="primary">Reserve Rocket</Button>
+        <button type="button" className={`btn reserved-${reserved}`} onClick={() => dispatch(reserverRocket(id))}>Reserve Rocket</button>
       </div>
     </li>
   );
@@ -26,6 +29,7 @@ Rocket.propTypes = {
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
   }).isRequired,
 };
 
