@@ -7,6 +7,17 @@
   padding: 1rem 4rem !important;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 80px;
+}
+
 nav {
   flex: 1;
   padding: 0.5rem 1rem;
