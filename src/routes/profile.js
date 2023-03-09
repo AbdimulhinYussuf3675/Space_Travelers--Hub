@@ -1,41 +1,28 @@
-import { getMissions } from 'features/Mission/mission';
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import ProfileItem from 'components/ProfileItem';
+import { useSelector } from 'react-redux';
 import styles from '../styles/Profilemiss.module.css';
 
-let render = true;
 const Profile = () => {
   const missions = useSelector((state) => state.missionReducer);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    if (!render) {
-      return;
-    }
-    render = false;
-    dispatch(getMissions());
-  }, [dispatch]);
 
   const newProf = missions.filter((mission) => mission.joined === true);
 
-  const profile = (prof) => {
-    let output = '';
-    if (prof.length === 0) {
-      output = <div className={styles.noMission}>No Mission Available</div>;
-    } else {
-      output = prof.map((mission) => (
-        <li key={mission.mission_id} className={styles.missionItems}>
-          {mission.mission_name}
-        </li>
-      ));
-    }
-    return output;
-  };
+  const myMission = () => (newProf.length > 0
+    ? newProf.map((mission) => (
+      <ProfileItem
+        key={mission.mission_id}
+        name={mission.mission_name}
+      />
+    ))
+    : <div className={styles.noMission}>No Mission Available</div>);
 
   return (
     <div className={styles.myProfile}>
       <div className={styles.missionContainer}>
         <h2>My Missions</h2>
-        <ul>{profile(newProf)}</ul>
+        <div className={styles.items}>
+          <ul>{myMission()}</ul>
+        </div>
       </div>
     </div>
   );
