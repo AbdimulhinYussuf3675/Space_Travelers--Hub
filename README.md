@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="/home/abdimulhin/Music/Microverse/Module3/week4/Space_Travelers--Hub/src/logo.png" alt="logo" width="140"  height="auto" />
+  <img src="logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
 </div>
