@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  const { rockets } = useSelector((store) => store.rocket);
+  const rockets = useSelector((store) => store.rocket);
+
   useEffect(() => {
     dispatch(getRockets());
   }, [dispatch]);

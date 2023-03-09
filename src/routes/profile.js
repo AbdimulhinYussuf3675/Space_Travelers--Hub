@@ -1,41 +1,41 @@
-import { getMissions } from 'features/Mission/mission';
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import ProfileItem from 'components/ProfileItem';
+import { useSelector } from 'react-redux';
 import styles from '../styles/Profilemiss.module.css';
 
-let render = true;
 const Profile = () => {
-  const missions = useSelector((state) => state.missionReducer);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    if (!render) {
-      return;
-    }
-    render = false;
-    dispatch(getMissions());
-  }, [dispatch]);
+  const { missionReducer, rocket } = useSelector((state) => state);
+  const newProf = missionReducer.filter((mission) => mission.joined === true);
+  const reservedRockets = rocket.filter((rocket) => rocket.reserved === true);
 
-  const newProf = missions.filter((mission) => mission.joined === true);
+  const myMission = () => (newProf.length > 0
+    ? newProf.map((mission) => (
+      <ProfileItem
+        key={mission.mission_id}
+        name={mission.mission_name}
+      />
+    ))
+    : <div className={styles.noMission}>No Mission Available</div>);
 
-  const profile = (prof) => {
-    let output = '';
-    if (prof.length === 0) {
-      output = <div className={styles.noMission}>No Mission Available</div>;
-    } else {
-      output = prof.map((mission) => (
-        <li key={mission.mission_id} className={styles.missionItems}>
-          {mission.mission_name}
-        </li>
-      ));
-    }
-    return output;
-  };
+  const myRockets = () => (reservedRockets.length > 0
+    ? reservedRockets.map((rocket) => (
+      <ProfileItem
+        key={rocket.id}
+        name={rocket.name}
+      />
+    ))
+    : <div className={styles.noMission}>No Reserved Rocket Available</div>);
 
   return (
     <div className={styles.myProfile}>
       <div className={styles.missionContainer}>
-        <h2>My Missions</h2>
-        <ul>{profile(newProf)}</ul>
+        <div>
+          <h2>My Mission</h2>
+          <ul>{myMission()}</ul>
+        </div>
+        <div>
+          <h2>My Rockets</h2>
+          <ul>{myRockets()}</ul>
+        </div>
       </div>
     </div>
   );
