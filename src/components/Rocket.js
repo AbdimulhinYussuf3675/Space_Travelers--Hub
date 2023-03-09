@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import styles from 'styles/Rocket.module.css';
 import { useDispatch } from 'react-redux';
-import { reserverRocket } from 'features/Rockets/Rockets';
+import { reserveRocket } from 'features/Rockets/Rockets';
 
 const Rocket = ({ data }) => {
   const {
@@ -17,7 +17,7 @@ const Rocket = ({ data }) => {
       <div className={styles.details}>
         <h3>{name}</h3>
         <p>{description}</p>
-        <button type="button" className={`btn reserved-${reserved}`} onClick={() => dispatch(reserverRocket(id))}>Reserve Rocket</button>
+        <button type="button" className={`btn reserved-${reserved}`} onClick={() => dispatch(reserveRocket(id))}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
       </div>
     </li>
   );
