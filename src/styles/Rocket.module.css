@@ -12,4 +12,9 @@
 
 .rocket h3 {
   margin: 0;
+  margin-bottom: 5px;
+}
+
+.rocket .details p {
+  margin: 10px 0;
 }

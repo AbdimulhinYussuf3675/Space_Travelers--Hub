@@ -17,7 +17,7 @@ const Rocket = ({ data }) => {
       </div>
       <div className={styles.details}>
         <h3>{name}</h3>
-        {reserved && <Badge bg="secondary">reserved</Badge>}
+        {reserved && <Badge>reserved</Badge>}
         <p>{description}</p>
         <button type="button" className={`btn reserved-${reserved}`} onClick={() => dispatch(reserveRocket(id))}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
       </div>
