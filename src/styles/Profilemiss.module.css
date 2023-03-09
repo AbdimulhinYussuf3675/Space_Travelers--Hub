@@ -1,12 +1,7 @@
-.myProfile {
-  display: flex;
-  justify-content: space-between;
-  width: 85%;
-  margin: 2% auto 0 auto;
-}
-
 .missionContainer {
-  min-width: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
 }
 
 .missionContainer ul {
@@ -17,6 +12,7 @@
   font-size: 1.5rem;
   font-weight: 500;
   color: #101;
+  margin-bottom: 10px;
 }
 
 .missionItems {
