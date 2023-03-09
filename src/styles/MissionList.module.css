@@ -44,7 +44,6 @@ tr td:nth-child(3) {
   border: 1px solid #333;
   height: 30px;
   padding: 5px;
-  text-align: start;
   vertical-align: top;
 }
 
