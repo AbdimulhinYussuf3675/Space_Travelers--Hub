@@ -31,6 +31,19 @@ ul {
   cursor: pointer;
 }
 
+.badge {
+  border-radius: 10px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 13px;
+  border: 0;
+  background-color: #0da5fd;
+  font-weight: 600;
+  color: #fff;
+  padding: 2px 7px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
 .reserved-true {
   background-color: #fff;
   color: #0d6efd;

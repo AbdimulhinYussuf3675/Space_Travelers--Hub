@@ -1,6 +1,7 @@
 import { PropTypes } from 'prop-types';
 import styles from 'styles/Rocket.module.css';
 import { useDispatch } from 'react-redux';
+import Badge from 'react-bootstrap/Badge';
 import { reserveRocket } from 'features/Rockets/Rockets';
 
 const Rocket = ({ data }) => {
@@ -16,6 +17,7 @@ const Rocket = ({ data }) => {
       </div>
       <div className={styles.details}>
         <h3>{name}</h3>
+        {reserved && <Badge>reserved</Badge>}
         <p>{description}</p>
         <button type="button" className={`btn reserved-${reserved}`} onClick={() => dispatch(reserveRocket(id))}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
       </div>

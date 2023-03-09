@@ -6,8 +6,10 @@ import logo from './image/logo.png';
 const Navbar = () => (
   <nav className={styles.navBar}>
     <div className={styles.logo}>
-      <img src={logo} alt="travelers logo " />
-      <h1>Space Rockets</h1>
+      <NavLink to="/" className={styles.link}>
+        <img src={logo} alt="travelers logo " />
+        <h1>Space Rockets</h1>
+      </NavLink>
     </div>
 
     <ul className={styles.navLinks}>
