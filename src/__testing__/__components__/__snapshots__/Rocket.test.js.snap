@@ -1,117 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navbar test check if navigation rendered 1`] = `
+exports[`Rocket component test Rocket is redered correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <nav
-        class="navBar"
+      <li
+        class="rocket"
       >
         <div
-          class="logo"
+          class="img"
         >
-          <a
-            aria-current="page"
-            class="link active"
-            href="/"
-          >
-            <img
-              alt="travelers logo "
-              src="logo.png"
-            />
-            <h1>
-              Space Rockets
-            </h1>
-          </a>
+          <img
+            alt="rocket 1"
+            src="image"
+          />
         </div>
-        <ul
-          class="navLinks"
+        <div
+          class="details"
         >
-          <li
-            class="links"
+          <h3>
+            rocket 1
+          </h3>
+          <p>
+            lorem ipsume fnjfie eifje
+          </p>
+          <button
+            class="btn reserved-false"
+            type="button"
           >
-            <a
-              aria-current="page"
-              class="link active"
-              href="/"
-            >
-              Rockets
-            </a>
-          </li>
-          <li>
-            <a
-              class="link"
-              href="/mission"
-            >
-              Missions
-            </a>
-          </li>
-          <li>
-            <a
-              class="link"
-              href="/Profile"
-            >
-              Profile
-            </a>
-          </li>
-        </ul>
-      </nav>
+            Reserve Rocket
+          </button>
+        </div>
+      </li>
     </div>
   </body>,
   "container": <div>
-    <nav
-      class="navBar"
+    <li
+      class="rocket"
     >
       <div
-        class="logo"
+        class="img"
       >
-        <a
-          aria-current="page"
-          class="link active"
-          href="/"
-        >
-          <img
-            alt="travelers logo "
-            src="logo.png"
-          />
-          <h1>
-            Space Rockets
-          </h1>
-        </a>
+        <img
+          alt="rocket 1"
+          src="image"
+        />
       </div>
-      <ul
-        class="navLinks"
+      <div
+        class="details"
       >
-        <li
-          class="links"
+        <h3>
+          rocket 1
+        </h3>
+        <p>
+          lorem ipsume fnjfie eifje
+        </p>
+        <button
+          class="btn reserved-false"
+          type="button"
         >
-          <a
-            aria-current="page"
-            class="link active"
-            href="/"
-          >
-            Rockets
-          </a>
-        </li>
-        <li>
-          <a
-            class="link"
-            href="/mission"
-          >
-            Missions
-          </a>
-        </li>
-        <li>
-          <a
-            class="link"
-            href="/Profile"
-          >
-            Profile
-          </a>
-        </li>
-      </ul>
-    </nav>
+          Reserve Rocket
+        </button>
+      </div>
+    </li>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

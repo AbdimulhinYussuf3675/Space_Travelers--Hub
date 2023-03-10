@@ -6,7 +6,7 @@ import store from 'app/store';
 import Navbar from 'components/Navbar';
 
 describe('Navbar test', () => {
-  test('check if  navigation rendered', () => {
+  test('check if navigation rendered', () => {
     const navbar = render(
       <Provider store={store}>
         <BrowserRouter>
