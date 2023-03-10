@@ -14,17 +14,35 @@ const Navbar = () => (
 
     <ul className={styles.navLinks}>
       <li className={styles.links}>
-        <NavLink to="/" className={styles.link}>
+        <NavLink
+          to="/"
+          style={({ isActive }) => ({
+            textDecoration: isActive ? 'underline' : '#545e6f',
+          })}
+          className={styles.link}
+        >
           Rockets
         </NavLink>
       </li>
       <li>
-        <NavLink to="/mission" className={styles.link}>
-          Missions
+        <NavLink
+          to="/mission"
+          style={({ isActive }) => ({
+            textDecoration: isActive ? 'underline' : '#545e6f',
+          })}
+          className={styles.link}
+        >
+          Missons
         </NavLink>
       </li>
       <li>
-        <NavLink to="/Profile" className={styles.link}>
+        <NavLink
+          to="/Profile"
+          style={({ isActive }) => ({
+            textDecoration: isActive ? 'underline' : '#545e6f',
+          })}
+          className={styles.link}
+        >
           Profile
         </NavLink>
       </li>
