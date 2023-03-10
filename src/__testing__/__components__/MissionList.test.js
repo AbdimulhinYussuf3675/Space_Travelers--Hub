@@ -7,11 +7,11 @@ import MissionList from 'components/missionList';
 
 describe('MissionList component test', () => {
   const data = {
-    id:3, 
-    name: "mission 1", 
-    description:"lorem ipsume fnjfie eifje", 
+    id: 3,
+    name: 'mission 1',
+    description: 'lorem ipsume fnjfie eifje',
     joined: false,
-  }
+  };
   test('MissionList is redered correctly', () => {
     const navbar = render(
       <Provider store={store}>
@@ -25,9 +25,9 @@ describe('MissionList component test', () => {
 
   test('check if MissionList prop is an object', () => {
     expect(data).toMatchObject({
-      id:3, 
-      name: "mission 1", 
-      description:"lorem ipsume fnjfie eifje", 
+      id: 3,
+      name: 'mission 1',
+      description: 'lorem ipsume fnjfie eifje',
       joined: false,
     });
   });

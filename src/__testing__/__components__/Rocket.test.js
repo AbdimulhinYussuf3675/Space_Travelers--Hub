@@ -7,12 +7,12 @@ import Rocket from 'components/Rocket';
 
 describe('Rocket component test', () => {
   const data = {
-    id:"2", 
-    image:"image", 
-    name: "rocket 1", 
-    description:"lorem ipsume fnjfie eifje", 
+    id: '2',
+    image: 'image',
+    name: 'rocket 1',
+    description: 'lorem ipsume fnjfie eifje',
     reserved: false,
-  }
+  };
   test('Rocket is redered correctly', () => {
     const navbar = render(
       <Provider store={store}>
@@ -26,10 +26,10 @@ describe('Rocket component test', () => {
 
   test('check if rocket prop is an object', () => {
     expect(data).toMatchObject({
-      id:"2", 
-      image:"image", 
-      name: "rocket 1", 
-      description:"lorem ipsume fnjfie eifje", 
+      id: '2',
+      image: 'image',
+      name: 'rocket 1',
+      description: 'lorem ipsume fnjfie eifje',
       reserved: false,
     });
   });

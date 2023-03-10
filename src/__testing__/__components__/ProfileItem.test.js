@@ -6,7 +6,7 @@ import store from 'app/store';
 import ProfileItem from 'components/ProfileItem';
 
 describe('ProfileItem component test', () => {
-  const name = "item name";
+  const name = 'item name';
 
   test('ProfileItem is redered correctly', () => {
     const profileItem = render(
@@ -20,6 +20,6 @@ describe('ProfileItem component test', () => {
   });
 
   test('check if it displays the prop value passed', () => {
-    expect(name).toEqual("item name");
+    expect(name).toEqual('item name');
   });
 });
