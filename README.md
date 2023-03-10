@@ -25,7 +25,6 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 # 📖<a name="about-project">Space Travellers Hub</a>
@@ -35,6 +34,9 @@
 <details>
   <summary>Client</summary>
   <ul>
+    <li><a href="https://html.com/">Html</a></li>
+    <li><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
 </details>
@@ -49,7 +51,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [comming soom](https://yourdeployedapplicationlink.com)
+- [Live Demo Link] Coming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,13 +72,13 @@ clone this repository to your disired folder and using the above command
 ```sh
     cd my-folder
     git clone https://github.com/AbdimulhinYussuf3675/Space_Travelers--Hub.git
-  cd Space_Travelers--Hub
+    cd Space_Travelers--Hub
 ```
 
 Install dependencies
 
 ```sh
-npm install -y
+    npm install -y
 ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -126,7 +128,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Abdimulhin Adan**
 
 - GitHub: [@AbdimulhinYussuf3675](https://github.com/AbdimulhinYussuf3675)
 - Twitter: [@abdimulhin](https://twitter.com/abdimulhin)
