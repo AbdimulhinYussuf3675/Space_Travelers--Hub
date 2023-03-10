@@ -3,11 +3,15 @@ import getRockets from 'features/Rockets/RocketsThunk';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+let render = true;
 const Rockets = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((store) => store.rocket);
-
   useEffect(() => {
+    if (!render) {
+      return;
+    }
+    render = false;
     dispatch(getRockets());
   }, [dispatch]);
 
