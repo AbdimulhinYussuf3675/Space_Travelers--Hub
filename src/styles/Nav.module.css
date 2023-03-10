@@ -44,8 +44,10 @@ nav {
   color: rgb(17, 45, 172);
 }
 
-.link:active {
-  color: #000;
+.link:focus {
+  color: #0290ff;
+  text-decoration: underline;
+  font-size: large;
 }
 
 .userIcon {
